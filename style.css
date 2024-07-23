@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --wight-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+}
+
+.card {
+  max-width: 350px;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--dark-blue);
+
+  position: relative;
+  align-self: stretch;
+}
+
+.card > .star {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #303945;
+  padding: 8.5px;
+
+  position: absolute;
+  left: 1.8rem;
+  top: 1.8rem;
+}
+
+.card h2 {
+  margin-top: 3.2rem;
+  color: var(--white);
+}
+
+.card blockquote {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  color: var(--wight-grey);
+}
+
+div.rating {
+  margin-top: 1.2rem;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+div.rating > div {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: #303945;
+
+  display: grid;
+  place-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  color: var(--wight-grey);
+}
+
+div.rating > div:hover {
+  scale: 0.96;
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: 0;
+
+  display: block;
+  width: 100%;
+  background-color: var(--orange);
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  scale: 1.02;
+  color: var(--very-dark-blue);
+  background-color: var(--white);
+}
+
+/* Card 2 */
+
+.card-thanks .img-thanks {
+  display: block;
+  margin: 0 auto;
+}
+
+.select-msg {
+  background-color: #303945;
+  margin: 1.5rem auto;
+  padding: 8px 1.2rem;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 0.8rem;
+  color: var(--orange);
+}
+
+.card-thanks > h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-thanks blockquote {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.selected {
+  background-color: var(--white) !important;
+  color: var(--very-dark-blue) !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 400px) {
+  body {
+    position: initial;
+    padding: 1rem;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  div.rating {
+    gap: 6px;
+  }
+
+  div.rating > div {
+    height: 28px;
+    width: 28px;
+  }
+}
